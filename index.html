@@ -8,7 +8,7 @@
 <meta name="description" content="Wedding Invitation for Chi. Sai Pranav &amp; Chi.La.Sow. Aneela — 18th &amp; 21st November 2026, Hyderabad.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Noto+Sans+Telugu:wght@400;500&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Jost:wght@300;400;500&family=Noto+Sans+Telugu:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
   --navy-deep: #090D1C;
@@ -24,7 +24,7 @@
   --error-bg: rgba(217, 48, 37, 0.14);
   --success: #81C995;
   --serif: 'Cormorant Garamond', Georgia, serif;
-  --script: 'Pinyon Script', 'Cormorant Garamond', Georgia, serif;
+  --script: 'Cormorant Garamond', Georgia, serif;
   --sans: 'Jost', system-ui, -apple-system, sans-serif;
   --telugu: 'Noto Sans Telugu', sans-serif;
 }
@@ -128,9 +128,10 @@ body {
 }
 .script-title {
   font-family: var(--script);
-  font-size: clamp(2.4rem, 7vw, 3.8rem);
+  font-style: italic;
+  font-size: clamp(2.1rem, 6.2vw, 3.3rem);
   color: var(--ivory);
-  font-weight: 400;
+  font-weight: 500;
   margin: 0.25rem 0;
   line-height: 1.15;
 }
@@ -171,8 +172,10 @@ body {
   outline-offset: -8px;
   display: grid;
   place-items: center;
-  font-family: var(--script);
-  font-size: 1.75rem;
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size: 1.5rem;
   color: var(--ivory);
   background: radial-gradient(circle, rgba(232, 195, 112, 0.12), transparent 70%);
 }
@@ -310,7 +313,9 @@ body {
 }
 .portrait-name {
   font-family: var(--script);
-  font-size: 2rem;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.85rem;
   color: var(--ivory);
   margin: 0.75rem 0 0;
 }
