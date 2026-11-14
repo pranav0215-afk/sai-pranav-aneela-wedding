@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0C1022">
+<title>Sai Pranav &amp; Aneela — Wedding Invitation</title>
+<meta name="description" content="Wedding Invitation for Chi. Sai Pranav &amp; Chi.La.Sow. Aneela — 18th &amp; 21st November 2026, Hyderabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&family=Noto+Sans+Telugu:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy-deep: #090D1C;
+  --navy-card: #11172E;
+  --navy-elevated: #171E3B;
+  --gold: #E8C370;
+  --gold-antique: #C99C48;
+  --gold-dim: rgba(232, 195, 112, 0.28);
+  --ivory: #FCF6E8;
+  --champagne: #DFD5C3;
+  --muted: #A9A295;
+  --error: #FF8A80;
+  --error-bg: rgba(217, 48, 37, 0.14);
+  --success: #81C995;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --script: 'Great Vibes', cursive;
+  --sans: 'Jost', system-ui, -apple-system, sans-serif;
+  --telugu: 'Noto Sans Telugu', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ivory);
+  background: radial-gradient(circle at 50% 0%, #192145 0%, var(--navy-deep) 60%);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.visually-hidden:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+/* ---------- Navigation ---------- */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.85rem 1rem;
+  background: rgba(9, 13, 28, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gold-dim);
+}
+.top-nav a {
+  color: var(--champagne);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+.top-nav a:hover, .top-nav a:focus-visible { color: var(--gold); }
+
+/* ---------- Layout & Cards ---------- */
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.royal-card {
+  position: relative;
+  background: linear-gradient(180deg, rgba(23, 30, 59, 0.92), rgba(14, 19, 38, 0.96));
+  border: 1px solid var(--gold-dim);
+  border-radius: 16px;
+  padding: clamp(2rem, 5vw, 3.25rem) clamp(1.25rem, 4vw, 2.5rem);
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
+}
+.royal-card::before {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  border: 1px solid rgba(232, 195, 112, 0.14);
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: fadeUp 0.7s ease both;
+  }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Typography ---------- */
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 0.5rem;
+}
+.telugu {
+  font-family: var(--telugu);
+  color: var(--champagne);
+  font-size: 0.98rem;
+}
+.script-title {
+  font-family: var(--script);
+  font-size: clamp(2.4rem, 7vw, 3.8rem);
+  color: var(--ivory);
+  font-weight: 400;
+  margin: 0.25rem 0;
+  line-height: 1.15;
+}
+.amp {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 1.8rem;
+  margin: 0.15rem 0;
+}
+.divider {
+  width: min(260px, 70%);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 1.5rem auto;
+  position: relative;
+}
+.divider::after {
+  content: "◆";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--gold);
+  font-size: 0.65rem;
+  background: var(--navy-card);
+  padding: 0 6px;
+}
+
+/* ---------- Monogram Crest ---------- */
+.crest {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1.25rem;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  outline: 1px solid rgba(232, 195, 112, 0.3);
+  outline-offset: -8px;
+  display: grid;
+  place-items: center;
+  font-family: var(--script);
+  font-size: 2.1rem;
+  color: var(--ivory);
+  background: radial-gradient(circle, rgba(232, 195, 112, 0.12), transparent 70%);
+}
+
+/* ---------- Parents Block ---------- */
+.parents-block {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.parent-role {
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--champagne);
+  font-size: 0.95rem;
+  margin: 0;
+}
+.parent-names {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ivory);
+  margin: 0.15rem 0 0;
+}
+.parent-industry {
+  font-size: 0.85rem;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  margin: 0.1rem 0 0;
+}
+
+/* ---------- Countdown ---------- */
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(60px, 90px));
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 1.75rem auto 1.5rem;
+}
+.cd-box {
+  background: rgba(9, 13, 28, 0.7);
+  border: 1px solid var(--gold-dim);
+  border-radius: 10px;
+  padding: 0.65rem 0.4rem;
+}
+.cd-num {
+  display: block;
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 600;
+  color: var(--gold);
+  line-height: 1.1;
+}
+.cd-lbl {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--champagne);
+}
+
+/* ---------- Buttons ---------- */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 48px;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+.btn:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 3px;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), var(--gold-antique));
+  color: #14120E;
+  border: none;
+}
+.btn-primary:hover { transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+}
+.btn-outline:hover { background: rgba(232, 195, 112, 0.1); }
+
+/* ---------- Portraits Section ---------- */
+.portraits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+.portrait-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arch-frame {
+  width: min(260px, 100%);
+  aspect-ratio: 3 / 4.3;
+  border-radius: 999px 999px 16px 16px;
+  border: 2px solid var(--gold);
+  outline: 1px solid rgba(232, 195, 112, 0.35);
+  outline-offset: -8px;
+  background: linear-gradient(180deg, #3A2230 0%, #1C1A2E 100%);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-top: 14px;
+}
+.arch-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+.portrait-name {
+  font-family: var(--script);
+  font-size: 2rem;
+  color: var(--ivory);
+  margin: 0.75rem 0 0;
+}
+
+/* ---------- Events Grid ---------- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.event-box {
+  background: rgba(9, 13, 28, 0.55);
+  border: 1px solid var(--gold-dim);
+  border-radius: 12px;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event-title {
+  font-family: var(--script);
+  font-size: 2.3rem;
+  color: var(--ivory);
+  margin: 0.2rem 0 0.75rem;
+}
+.event-date {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--gold);
+  margin: 0;
+}
+.event-time {
+  font-size: 0.92rem;
+  color: var(--champagne);
+  margin: 0.25rem 0 0.5rem;
+}
+.event-venue {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ivory);
+  margin: 0.5rem 0 0.2rem;
+}
+.event-addr {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 0.6rem;
+}
+
+/* ---------- RSVP Form (Accessible + :user-invalid) ---------- */
+.rsvp-form {
+  text-align: left;
+  max-width: 540px;
+  margin: 1.5rem auto 0;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-block-end: 1.35rem;
+}
+.field label, .field legend {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--champagne);
+}
+.hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.field input[type="text"],
+.field input[type="tel"],
+.field input[type="email"],
+.field select,
+.field textarea {
+  font: inherit;
+  font-size: max(1rem, 1em);
+  min-height: 48px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid rgba(232, 195, 112, 0.35);
+  background: rgba(9, 13, 28, 0.8);
+  color: var(--ivory);
+  width: 100%;
+}
+.field textarea { min-height: 96px; resize: vertical; }
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.field :is(:user-invalid, .user-invalid-fallback) {
+  border-color: var(--error);
+  background-color: var(--error-bg);
+}
+.field :is(:user-valid, .user-valid-fallback) {
+  border-color: var(--success);
+}
+.error-msg {
+  display: none;
+  color: var(--error);
+  font-size: 0.85rem;
+  margin-top: 0.15rem;
+}
+.field :is(:user-invalid, .user-invalid-fallback) + .error-msg {
+  display: block;
+}
+
+fieldset.choice-group {
+  border: 1px solid rgba(232, 195, 112, 0.22);
+  border-radius: 10px;
+  padding: 0.85rem 1rem 1rem;
+  margin: 0 0 1.35rem;
+}
+fieldset.choice-group legend {
+  padding: 0 0.4rem;
+}
+.choice-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin-top: 0.35rem;
+}
+.choice-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  cursor: pointer;
+}
+.choice-item input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--gold);
+}
+
+/* ---------- Modal Dialog (light-dismiss) ---------- */
+dialog#rsvp-dialog {
+  max-width: 460px;
+  width: calc(100% - 2rem);
+  background: var(--navy-elevated);
+  color: var(--ivory);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.8);
+}
+dialog#rsvp-dialog::backdrop {
+  background: rgba(5, 8, 18, 0.72);
+  backdrop-filter: blur(4px);
+}
+.dialog-summary {
+  background: rgba(9, 13, 28, 0.65);
+  border: 1px solid var(--gold-dim);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0 1.25rem;
+  text-align: left;
+  font-size: 0.92rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem 3rem;
+  color: var(--champagne);
+  font-size: 0.9rem;
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav" aria-label="Invitation sections">
+  <a href="#invite">Invitation</a>
+  <a href="#couple">Couple</a>
+  <a href="#events">Venues &amp; Maps</a>
+</nav>
+
+<main class="container">
+  <!-- HERO / INVITATION -->
+  <section id="invite" class="royal-card reveal">
+    <div class="crest" aria-hidden="true">SP &amp; A</div>
+    <p class="eyebrow">Srirasthu • Shubhamasthu • Avighnamasthu</p>
+    <p class="telugu">|| శ్రీ గణేశాయ నమః ||</p>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <p class="parent-role">Together with their families</p>
+    <h1 class="script-title">Chi. Sai Pranav</h1>
+    <div class="amp" aria-hidden="true">&amp;</div>
+    <p class="script-title">Chi.La.Sow. Aneela</p>
+
+    <div class="parents-block">
+      <div>
+        <p class="parent-role">Son of</p>
+        <p class="parent-names">Smt. Bojja Laxmi &amp; Sri Bojja Prabhakar Gupta</p>
+        <p class="parent-industry">(Sri Sai Lakshmi Industries)</p>
+      </div>
+      <div>
+        <p class="parent-role">Youngest Daughter of</p>
+        <p class="parent-names">Smt. &amp; Sri Veeramalla Vijayalaxmi - Srinivasulu</p>
+      </div>
+    </div>
+
+    <div class="countdown" aria-label="Countdown to Sumuhurtham">
+      <div class="cd-box"><span class="cd-num" id="cd-days">--</span><span class="cd-lbl">Days</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-hours">--</span><span class="cd-lbl">Hours</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-mins">--</span><span class="cd-lbl">Mins</span></div>
+      <div class="cd-box"><span class="cd-num" id="cd-secs">--</span><span class="cd-lbl">Secs</span></div>
+    </div>
+
+    <div class="btn-row">
+      <a class="btn btn-primary" href="#events">Venues &amp; Maps</a>
+      <button type="button" class="btn btn-outline" id="add-cal-btn">Add to Calendar</button>
+    </div>
+  </section>
+
+  <!-- COUPLE PORTRAITS -->
+  <section id="couple" class="royal-card reveal">
+    <p class="eyebrow">Two Hearts • One Journey</p>
+    <h2 class="script-title" style="font-size: clamp(2.1rem, 6vw, 3rem);">The Groom &amp; The Bride</h2>
+    <div class="portraits-grid">
+      <div class="portrait-card">
+        <div class="arch-frame">
+          <img src="assets/groom.png" alt="Chi. Sai Pranav in dark embroidered sherwani" loading="lazy">
+        </div>
+        <p class="portrait-name">Chi. Sai Pranav</p>
+      </div>
+      <div class="portrait-card">
+        <div class="arch-frame">
+          <img src="assets/bride.png" alt="Chi.La.Sow. Aneela in coral-pink and gold silk saree" loading="lazy">
+        </div>
+        <p class="portrait-name">Chi.La.Sow. Aneela</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTS & VENUES -->
+  <section id="events" class="royal-card reveal">
+    <p class="eyebrow">Save The Dates</p>
+    <h2 class="script-title" style="font-size: clamp(2.1rem, 6vw, 3rem);">Wedding Celebrations</h2>
+    <div class="events-grid">
+      <article class="event-box">
+        <p class="eyebrow">Wedding Ceremony</p>
+        <h3 class="event-title">Sumuhurtham</h3>
+        <p class="event-date">Wednesday, 18th November 2026</p>
+        <p class="event-time">At 11:26 AM • "Makara Lagnam"</p>
+        <p class="telugu" style="font-size:0.86rem;">శ్రీ పరాభవ నామ సంవత్సర కార్తీక శుద్ధ నవమి, మకర లగ్నమున</p>
+        <p class="event-venue">SPR Srirasthu Convention</p>
+        <p class="event-addr">Nagarjuna Sagar Road, Neeladri Nagar, Injapur, Hyderabad</p>
+        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/gmFNBG25V5167rop7?g_st=ic">Open Marriage Location</a>
+      </article>
+
+      <article class="event-box">
+        <p class="eyebrow">Evening Celebration</p>
+        <h3 class="event-title">Grand Reception</h3>
+        <p class="event-date">Saturday, 21st November 2026</p>
+        <p class="event-time">From 7:00 PM Onwards</p>
+        <p class="telugu" style="font-size:0.86rem;">శనివారం తేది 21-11-2026 సాయంత్రం 7:00 గంటల నుండి</p>
+        <p class="event-venue">SNR Kala Convention</p>
+        <p class="event-addr">Opp. SNS Kajaria, Krupa Colony, Pedda Amberpet, Hyderabad</p>
+        <a class="btn btn-primary" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/jnAw5kLPAfcY73kn6?g_st=ic">Open Reception Location</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p class="eyebrow">Cordially Invited By</p>
+  <p class="parent-names">Smt. Bojja Laxmi &amp; Sri Bojja Prabhakar Gupta</p>
+  <p class="parent-industry">(Sri Sai Lakshmi Industries)</p>
+  <p class="telugu" style="margin-top:0.5rem;">ఆహ్వానించువారు: శ్రీమతి బొజ్జ లక్ష్మి &amp; శ్రీ బొజ్జ ప్రభాకర్ గుప్త</p>
+</footer>
+
+<script>
+(() => {
+  // 1. Live Countdown to Nov 18, 2026 11:26 AM IST (+05:30)
+  const targetTime = new Date('2026-11-18T11:26:00+05:30').getTime();
+  const updateCountdown = () => {
+    const diff = Math.max(0, targetTime - Date.now());
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent = String(d).padStart(2, '0');
+    document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(m).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(s).padStart(2, '0');
+  };
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // 2. Add to Calendar (.ics download)
+  document.getElementById('add-cal-btn').addEventListener('click', () => {
+    const ics = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//SaiPranavAneelaWedding//EN',
+      'BEGIN:VEVENT',
+      'DTSTART:20261118T055600Z',
+      'DTEND:20261118T093000Z',
+      'SUMMARY:Wedding of Chi. Sai Pranav & Chi.La.Sow. Aneela',
+      'LOCATION:SPR Srirasthu Convention, Injapur, Hyderabad',
+      'DESCRIPTION:Sumuhurtham at 11:26 AM (Makara Lagnam). Reception on Nov 21 at SNR Kala Convention.',
+      'END:VEVENT',
+      'END:VCALENDAR'
+    ].join('\r\n');
+    const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'Sai_Pranav_Aneela_Wedding.ics';
+    a.click();
+    URL.revokeObjectURL(a.href);
+  });
+})();
+</script>
+</body>
+</html>
